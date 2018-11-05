@@ -28,7 +28,7 @@
 
     function addPlayer() {
       // dynamically build the player video element
-      playerHTML = '<iframe src=\"//players.brightcove.net/' + playerData.accountId + '/' + playerData.playerId + '_default/index.html?videoId=' + playerData.videoId + '\"' + ' allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>';
+      playerHTML = '<iframe src=\"https://players.brightcove.net/' + playerData.accountId + '/' + playerData.playerId + '_default/index.html?videoId=' + playerData.videoId + '\"' + ' allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>';
 
       // inject the player code into the DOM
       document.getElementById('placeHolder').innerHTML = playerHTML;

@@ -30,12 +30,12 @@
     // +++ Build the player and place in HTML DOM +++
     function addPlayer() {
       // Dynamically build the player video element
-      playerHTML = '<video id=\"myPlayerID\" data-video-id=\"' + playerData.videoId + '\"  data-account=\"' + playerData.accountId + '\" data-player=\"' + playerData.playerId + '\" data-embed=\"default\" class=\"video-js\" controls></video>';
+      playerHTML = '<video-js id=\"myPlayerID\" data-video-id=\"' + playerData.videoId + '\"  data-account=\"' + playerData.accountId + '\" data-player=\"' + playerData.playerId + '\" data-embed=\"default\" class=\"video-js\" controls></video-js>';
       // Inject the player code into the DOM
       document.getElementById('placeHolder').innerHTML = playerHTML;
       // Add and execute the player script tag
       var s = document.createElement('script');
-      s.src = "//players.brightcove.net/" + playerData.accountId + "/" + playerData.playerId + "_default/index.min.js";
+      s.src = "https://players.brightcove.net/" + playerData.accountId + "/" + playerData.playerId + "_default/index.min.js";
       document.body.appendChild(s);
       s.onload = callback;
     }
